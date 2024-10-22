@@ -1,4 +1,3 @@
-# app.py
 import streamlit as st
 from config import load_yolo_model
 from util import detect_plates, detect_characters, process_video
@@ -12,8 +11,8 @@ st.title("Plate Detection and Character Recognition")
 upload_type = st.radio("Select Upload Type", ["Image", "Video"])
 
 # Load models
-plate_model_path = "Models\Plate-best.pt"  # Update with the path to Plate.pt
-ocr_model_path = "Models\OCR-best.pt"  # Update with the path to ocr.pt
+plate_model_path = "Models/Plate-best.pt"  
+ocr_model_path = "Models/OCR-best.pt"  
 plate_model = load_yolo_model(plate_model_path)
 ocr_model = load_yolo_model(ocr_model_path)
 
