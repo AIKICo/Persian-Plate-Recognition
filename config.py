@@ -1,4 +1,3 @@
-# config.py
 from ultralytics import YOLO
 
 # Function to load YOLO model
