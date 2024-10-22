@@ -1,4 +1,3 @@
-# util.py
 import cv2
 import numpy as np
 from config import charclassnames
@@ -19,8 +18,8 @@ def detect_characters(plate_region, model):
             x1, y1, x2, y2, conf, cls = box.tolist()
             detected_classes.append((int(cls), int(x1)))
 
-    # Sort detected characters from right to left
-    detected_classes.sort(key=lambda x: x[1])  # Sort in reverse order (right to left)
+    # Sort detected characters
+    detected_classes.sort(key=lambda x: x[1])
     detected_characters = ''.join([charclassnames[cls] for cls, _ in detected_classes if cls < len(charclassnames)])
     
     return detected_characters
