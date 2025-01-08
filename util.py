@@ -1,6 +1,7 @@
 import cv2
-import numpy as np
+
 from config import charclassnames
+
 
 # Function to detect plates
 def detect_plates(image, model):
